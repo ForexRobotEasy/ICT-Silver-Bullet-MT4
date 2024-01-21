@@ -1,0 +1,103 @@
+
+//+------------------------------------------------------------------+
+//|                                                ICT Silver Bullet |
+//|                        Developed by Forex Robot Easy Team         |
+//|                            Website: forexroboteasy.com             |
+//+------------------------------------------------------------------+
+
+//+------------------------------------------------------------------+
+//|                                                                  |
+//|                                                                  |
+//|                            Strategy                                |
+//|                                                                  |
+//|                                                                  |
+//+------------------------------------------------------------------+
+
+// Import necessary indicators and libraries
+#property indicator_separate_window
+#property indicator_buffers 4
+#property indicator_color1 Red
+#property indicator_color2 Blue
+#property indicator_color3 Green
+#property indicator_color4 Yellow
+
+// Define indicator buffers
+double FVGBuffer[];
+double BOSBuffer[];
+double CHOCHBuffer[];
+double SwingHighBuffer[];
+double SwingLowBuffer[];
+double PrevWeekHighBuffer[];
+double PrevWeekLowBuffer[];
+double PrevDayHighBuffer[];
+double PrevDayLowBuffer[];
+double ThreeWeeksOpenGapBuffer[];
+
+//+------------------------------------------------------------------+
+//| Custom indicator initialization function                         |
+//+------------------------------------------------------------------+
+int init()
+{
+    // Set indicator labels
+    IndicatorShortName('ICT Silver Bullet MT4');
+    
+    // Set indicator buffers
+    SetIndexBuffer(0, FVGBuffer);
+    SetIndexBuffer(1, BOSBuffer);
+    SetIndexBuffer(2, CHOCHBuffer);
+    SetIndexBuffer(3, SwingHighBuffer);
+    SetIndexBuffer(4, SwingLowBuffer);
+    SetIndexBuffer(5, PrevWeekHighBuffer);
+    SetIndexBuffer(6, PrevWeekLowBuffer);
+    SetIndexBuffer(7, PrevDayHighBuffer);
+    SetIndexBuffer(8, PrevDayLowBuffer);
+    SetIndexBuffer(9, ThreeWeeksOpenGapBuffer);
+    
+    return(0);
+}
+
+//+------------------------------------------------------------------+
+//| Custom indicator deinitialization function                       |
+//+------------------------------------------------------------------+
+int deinit()
+{
+    // Clear indicator buffers
+    ArrayInitialize(FVGBuffer, EMPTY_VALUE);
+    ArrayInitialize(BOSBuffer, EMPTY_VALUE);
+    ArrayInitialize(CHOCHBuffer, EMPTY_VALUE);
+    ArrayInitialize(SwingHighBuffer, EMPTY_VALUE);
+    ArrayInitialize(SwingLowBuffer, EMPTY_VALUE);
+    ArrayInitialize(PrevWeekHighBuffer, EMPTY_VALUE);
+    ArrayInitialize(PrevWeekLowBuffer, EMPTY_VALUE);
+    ArrayInitialize(PrevDayHighBuffer, EMPTY_VALUE);
+    ArrayInitialize(PrevDayLowBuffer, EMPTY_VALUE);
+    ArrayInitialize(ThreeWeeksOpenGapBuffer, EMPTY_VALUE);
+    
+    return(0);
+}
+
+//+------------------------------------------------------------------+
+//| Custom indicator iteration function                              |
+//+------------------------------------------------------------------+
+int start()
+{
+    // Identify Fair Value Gaps (FVG)
+    // ...
+    
+    // Identify Market Structure: BOS and CHOCH
+    // ...
+    
+    // Identify Swing High and Low
+    // ...
+    
+    // Identify previous and current week's high and low
+    // ...
+    
+    // Identify previous day's high and low
+    // ...
+    
+    // Identify back to three weeks open gap New York open price
+    // ...
+    
+    return(0);
+}
